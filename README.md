@@ -5,7 +5,7 @@ O Riverflow é um projeto de engenharia de dados end-to-end que simula o ecossis
 🏗️ A Arquitetura do Projeto
 O projeto foi estruturado em três camadas principais, integrando engenharia, estatística e tecnologia:
 
-https://github.com/Marcelao98/Riverflow/blob/main/Imagens/fluxograma-removebg-preview.png?raw=true
+![Fluxograma do Pipeline](https://github.com/Marcelao98/Riverflow/blob/main/Imagens/fluxograma-removebg-preview.png?raw=true)
 
 1. Camada de Simulação (Python)
 Para garantir um cenário realista de 3 anos de histórico, utilizei Python para simular o comportamento físico e operacional dos ativos:
