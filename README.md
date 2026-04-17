@@ -1,46 +1,43 @@
+Justo! Manter em 3 camadas é até mais fiel ao fluxograma que você montou e deixa a explicação mais robusta, porque mostra que o SQL é o "coração" onde a modelagem e a inteligência acontecem juntas.
+
+Aqui está o ajuste final do texto para o seu GitHub, alinhado exatamente com as 3 camadas do seu diagrama:
+
 Riverflow | Pipeline de Dados para Confiabilidade e Performance
-O Riverflow é um projeto de engenharia de dados end-to-end que simula o ecossistema de uma planta de tratamento de água. O objetivo é demonstrar o fluxo completo da informação: desde a geração de dados brutos (simulando um ERP) até a entrega de dashboards estratégicos para tomada de decisão em Manutenção e Confiabilidade.
+O Riverflow é um projeto de engenharia de dados end-to-end que simula o ecossistema de uma planta de tratamento de água. O objetivo é demonstrar o fluxo completo da informação: desde a geração de dados brutos até a entrega de dashboards estratégicos para tomada de decisão em Manutenção e Confiabilidade.
 
 🏗️ A Arquitetura do Projeto
-O projeto foi estruturado em quatro camadas principais:
+O projeto foi estruturado em três camadas principais, integrando engenharia, estatística e tecnologia:
 
-1. Simulação de Dados (Python)
-Para garantir um cenário realista de 3 anos de histórico, utilizei Python para simular o comportamento dos ativos.
+[INSERIR AQUI O FLUXOGRAMA DO PIPELINE - fluxograma-removebg-preview.png]
 
-Lógica de Falhas: Aplicação de Distribuição de Weibull para modelar o tempo entre falhas (MTBF), permitindo simular diferentes estágios de vida dos equipamentos (mortalidade infantil, falhas aleatórias e desgaste).
+1. Camada de Simulação (Python)
+Para garantir um cenário realista de 3 anos de histórico, utilizei Python para simular o comportamento físico e operacional dos ativos:
 
-Priorização: Uso do Princípio de Pareto para distribuir custos e criticidade entre os ativos.
+Lógica de Falhas: Aplicação de Distribuição de Weibull para modelar o tempo entre falhas (MTBF), simulando diferentes estágios de vida dos equipamentos (mortalidade infantil, falhas aleatórias e desgaste).
 
-Outputs: Geração de tabelas de Ordens de Manutenção (OM), Notas de Manutenção e Registros de Custos.
+Priorização: Uso do Princípio de Pareto para distribuição de custos e criticidade.
 
-2. Modelagem de Dados (SQL & Star Schema)
-Os dados brutos foram estruturados em um banco de dados seguindo o modelo Star Schema (Esquema Estrela), garantindo performance e integridade:
+Outputs: Geração de tabelas de Ordens de Manutenção (OM), Notas e Registros de Custos (CSV).
 
-Fato: Ordens de Manutenção e Custos.
+2. Camada de Engenharia e Inteligência (SQL)
+Nesta etapa, o dado bruto foi transformado em ativos de decisão. Concentrei toda a lógica de negócio e estruturação diretamente no banco de dados:
 
-Dimensões: Ativos (Bombas, Motores, Painéis), Localização Industrial e uma Dimensão Calendário robusta para análises temporais.
+Modelagem Star Schema: Estruturação de um Data Warehouse com tabelas de Fato (Ordens e Notas) e Dimensões (Ativos, Calendário e Localização), garantindo performance analítica.
 
-3. Camada de Inteligência (SQL Views)
-Em vez de processar cálculos no BI, a inteligência foi embarcada no SQL através de Views complexas para o cálculo de KPIs de Classe Mundial:
+Cálculo de KPIs via Views: Inteligência embarcada em SQL para cálculo de indicadores de classe mundial: MTBF, MTTR, Disponibilidade, Backlog e aderência ao planejamento (HH).
 
-Confiabilidade: MTBF, MTTR e Disponibilidade Inerente/Operacional.
+[INSERIR AQUI O DIAGRAMA DO BANCO DE DADOS - diagrama.jpg]
 
-Operacional: Backlog, Aderência ao Cronograma Semanal (HH Planejado vs. Executado).
+3. Camada de Visualização (Tableau BI)
+A entrega final consiste em um ecossistema de dashboards dinâmicos, permitindo o drill-down do estratégico ao operacional:
 
-Financeiro: Evolução de custos (Corretiva vs. Preventiva).
+Dashboard de Performance: Visões integradas de Confiabilidade (engenharia), Operacional (PCM) e Custos (gestão financeira).
 
-4. Visualização de Dados (Tableau)
-A entrega final consiste em um Dashboard dinâmico dividido em três perspectivas:
-
-Painel de Confiabilidade: Foco técnico em engenharia de ativos.
-
-Painel Operacional: Gestão do dia a dia para o PCM e Supervisão.
-
-Painel de Custos: Visão executiva para controle orçamentário.
+[INSERIR AQUI O PRINT DA VISÃO GERAL - image_f6fb32.png]
 
 🚀 Como Explorar
-SQL: As queries de criação das tabelas e KPIs estão na pasta /scripts_sql.
+Simulação: O script de geração dos dados está em /data_simulation.
 
-Python: O notebook de simulação está em /data_simulation.
+Engenharia/SQL: As queries de modelagem e Views de inteligência estão em /scripts_sql.
 
-Dashboard: [Link para o seu Tableau Public aqui]
+Dashboard Interativo: [Acesse o projeto no Tableau Public aqui]
