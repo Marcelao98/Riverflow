@@ -30,8 +30,7 @@ A entrega final consiste em um ecossistema de dashboards dinâmicos, permitindo 
 
 Dashboard de Performance: Visões integradas de Confiabilidade (engenharia), Operacional (PCM) e Custos (gestão financeira).
 
-[INSERIR AQUI O PRINT DA VISÃO GERAL - image_f6fb32.png]
-
+![Dashboard Riverflow - Visão Geral](https://github.com/Marcelao98/Riverflow/blob/main/Imagens/vis%C3%A3ogeral.jpg?raw=true)
 🚀 Como Explorar
 Simulação: O script de geração dos dados está em /data_simulation.
 
