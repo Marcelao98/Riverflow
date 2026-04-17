@@ -23,7 +23,7 @@ Modelagem Star Schema: Estruturação de um Data Warehouse com tabelas de Fato (
 
 Cálculo de KPIs via Views: Inteligência embarcada em SQL para cálculo de indicadores de classe mundial: MTBF, MTTR, Disponibilidade, Backlog e aderência ao planejamento (HH).
 
-[INSERIR AQUI O DIAGRAMA DO BANCO DE DADOS - diagrama.jpg]
+![Diagrama Star Schema](https://github.com/Marcelao98/Riverflow/blob/main/Imagens/diagrama.jpg?raw=true)
 
 3. Camada de Visualização (Tableau BI)
 A entrega final consiste em um ecossistema de dashboards dinâmicos, permitindo o drill-down do estratégico ao operacional:
