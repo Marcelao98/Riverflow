@@ -32,7 +32,7 @@ Dashboard de Performance: Visões integradas de Confiabilidade (engenharia), Ope
 
 ![Dashboard Riverflow - Visão Geral](https://github.com/Marcelao98/Riverflow/blob/main/Imagens/vis%C3%A3ogeral.jpg?raw=true)
 🚀 Como Explorar
-Simulação: O script de geração dos dados está em /data_simulation.
+Simulação: O script de geração dos dados está em [Simualação](.Python/)
 
 Engenharia/SQL: As queries de modelagem e Views de inteligência estão em /scripts_sql.
 
