@@ -1,6 +1,3 @@
-Justo! Manter em 3 camadas é até mais fiel ao fluxograma que você montou e deixa a explicação mais robusta, porque mostra que o SQL é o "coração" onde a modelagem e a inteligência acontecem juntas.
-
-Aqui está o ajuste final do texto para o seu GitHub, alinhado exatamente com as 3 camadas do seu diagrama:
 
 Riverflow | Pipeline de Dados para Confiabilidade e Performance
 O Riverflow é um projeto de engenharia de dados end-to-end que simula o ecossistema de uma planta de tratamento de água. O objetivo é demonstrar o fluxo completo da informação: desde a geração de dados brutos até a entrega de dashboards estratégicos para tomada de decisão em Manutenção e Confiabilidade.
